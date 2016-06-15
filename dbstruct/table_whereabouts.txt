@@ -1,0 +1,8 @@
+ref,int(11),YES,,,
+date_movement,int(11),YES,,,
+who_to,varchar(100),YES,MUL,,
+note,text,YES,,,
+mylocation,varchar(250),YES,MUL,,
+note_id,int(11),NO,PRI,,auto_increment
+user,int(11),YES,,,
+page,int(5),YES,,,
