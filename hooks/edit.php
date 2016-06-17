@@ -4,6 +4,7 @@ function HookWhereaboutsEditAddcollapsiblesection() {
 	global $collapsible_sections,$ref,$userref,$whereabouts_rt_exclude,$resource,$whereabouts_show_maps_all,$whereabouts_show_maps,$whereabouts_google_apikey,$lang,$whereabouts_use_wholist,$whereabouts_wholist,$whereabouts_use_datepicker,$whereabouts_google_static_zoomlevel;
 	$notes=sql_query("select * from whereabouts where ref='$ref' ORDER by date_movement DESC");
 	if (in_array($resource['resource_type'],$whereabouts_rt_exclude)){return false;}
+	if ($ref<0){return false;}
 ?><h2  <?php if($collapsible_sections){echo'class="CollapsibleSectionHead"';}?> id="WhereaboutsSectionHead"><?php echo $lang['whereabouts']; ?></h2><?php
 ?><div <?php if($collapsible_sections){echo'class="CollapsibleSection"';}?> id="WhereaboutsSection">
 
