@@ -17,7 +17,7 @@ Download the whole diretory and rename to "whereabouts". Then you can install it
 ## Installation Part II: VERY IMPORTANT
 *Only worry about the following IF your RS version is prior to SVN r8394 (which comes after 7.8 version released 6/17/16):*
 
-Because this plugin relies on a hook that is not yet in Resourcespace, you will need to add this hook in the /pages/edit.php page. 
+Because this plugin relies on a hook that is not in Resourcespace prior to r8394, you will probably need to add this hook in the /pages/edit.php page. 
 Find the code that looks like this:
 
 ```
