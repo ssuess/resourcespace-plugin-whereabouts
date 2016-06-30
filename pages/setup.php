@@ -8,6 +8,7 @@ include '../../../include/db.php';
 include_once '../../../include/general.php';
 include '../../../include/authenticate.php'; if (!checkperm('a')) {exit ($lang['error-permissiondenied']);}
 
+
 // Specify the name of this plugin and the heading to display for the page.
 $plugin_name = 'whereabouts';
 $plugin_page_heading = $lang['whereabouts_configuration'];
@@ -28,6 +29,39 @@ $page_def[] = config_add_text_input('whereabouts_wholist', $lang["whereabouts_wh
 
 // Do the page generation ritual -- don't change this section.
 $upload_status = config_gen_setup_post($page_def, $plugin_name);
-include '../../../include/header.php';
+include '../../../include/header.php';?><script  type="text/javascript">
+    
+jQuery(document).ready(function () {
+    toggleFields(); //call this first so we start out with the correct visibility depending on the selected form values
+    //this will call our toggleFields function every time the selection value of our underAge field changes
+    jQuery("#whereabouts_show_maps").change(function () {
+        toggleFields();
+    });
+    jQuery("#whereabouts_use_wholist").change(function () {
+        toggleFields();
+    });
+
+});
+//this toggles the visibility of our parent permission fields depending on the current selected value of the underAge field
+function toggleFields() {
+    if (jQuery('#whereabouts_show_maps').val()==1) {
+            jQuery('#whereabouts_show_maps_all').parent().show();
+            jQuery('#whereabouts_google_static_apikey').parent().show();
+            jQuery('#whereabouts_google_static_zoomlevel').parent().show();
+               } else {
+            jQuery('#whereabouts_show_maps_all').parent().hide();
+            jQuery('#whereabouts_google_static_apikey').parent().hide();
+            jQuery('#whereabouts_google_static_zoomlevel').parent().hide();
+            }
+            
+     if (jQuery('#whereabouts_use_wholist').val()==1) {
+            jQuery('#whereabouts_wholist').parent().show();
+               } else {
+            jQuery('#whereabouts_wholist').parent().hide();
+            }        
+}
+    
+</script><?php
 config_gen_setup_html($page_def, $plugin_name, $upload_status, $plugin_page_heading);
 include '../../../include/footer.php';
+?>

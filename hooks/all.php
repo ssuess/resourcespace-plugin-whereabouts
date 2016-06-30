@@ -34,38 +34,7 @@ function HookWhereaboutsAllRemoveannotations(){
 function HookWhereaboutsAllAdditionalheaderjs(){
 	global $baseurl,$k,$baseurl_short,$css_reload_key;
 ?>
-<script  type="text/javascript">
-    
-jQuery(document).ready(function () {
-    toggleFields(); //call this first so we start out with the correct visibility depending on the selected form values
-    //this will call our toggleFields function every time the selection value of our underAge field changes
-    jQuery("#whereabouts_show_maps").change(function () {
-        toggleFields();
-    });
-    jQuery("#whereabouts_use_wholist").change(function () {
-        toggleFields();
-    });
 
-});
-function toggleFields() {
-    if (jQuery('#whereabouts_show_maps').val()==1) {
-            jQuery('#whereabouts_show_maps_all').parent().show();
-            jQuery('#whereabouts_google_static_apikey').parent().show();
-            jQuery('#whereabouts_google_static_zoomlevel').parent().show();
-               } else {
-            jQuery('#whereabouts_show_maps_all').parent().hide();
-            jQuery('#whereabouts_google_static_apikey').parent().hide();
-            jQuery('#whereabouts_google_static_zoomlevel').parent().hide();
-            }
-            
-     if (jQuery('#whereabouts_use_wholist').val()==1) {
-            jQuery('#whereabouts_wholist').parent().show();
-               } else {
-            jQuery('#whereabouts_wholist').parent().hide();
-            }        
-}
-    
-</script>
 <script language="javascript">
 	jQuery(window).load(function(){
 jQuery("#addnote").live("click",function(){

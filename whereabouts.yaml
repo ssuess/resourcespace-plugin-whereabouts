@@ -1,6 +1,6 @@
 name    : whereabouts
 author  : Stephen Suess
-version : 1.0
+version : 1.0.1
 desc    : Enables tracking of item whereabouts
 config_url: /plugins/whereabouts/pages/setup.php
 default_priority: 999
