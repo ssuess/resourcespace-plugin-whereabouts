@@ -1,7 +1,8 @@
 name    : whereabouts
 author  : Stephen Suess
-version : 1.0.1
+version : 1.0.2
 desc    : Enables tracking of item whereabouts
+info_url: https://github.com/ssuess/resourcespace-plugin-whereabouts
 config_url: /plugins/whereabouts/pages/setup.php
 default_priority: 999
 category: Item Tracking

@@ -45,6 +45,7 @@ Then add the hook `hook('addcollapsiblesection');` just after so it will all loo
 - Column headings can all be changed in the config.php file
 
 ## Changelog
+* `v 1.0.2` - added classes for CSS
 * `v 1.0.1` - bugfix moved js to setup page from all
 * `v 1.0` - Initial Release
 
